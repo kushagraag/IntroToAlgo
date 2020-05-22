@@ -43,6 +43,8 @@ auto sorting(vector<int> &arr){
     return duration;
 }
     // print
+
+    
 void print(vector<int> &arr, std::chrono::microseconds duration){
     cout<<"After Sorting : ";
     for(int k : arr){
