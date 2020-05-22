@@ -23,7 +23,6 @@ void start(vector<int> &arr){
             break;
     }
 }
-
     //  sorting
 auto sorting(vector<int> &arr){
     int swap = 0;
@@ -43,7 +42,6 @@ auto sorting(vector<int> &arr){
     auto duration = duration_cast<microseconds>(stop - start);
     return duration;
 }
-
     // print
 void print(vector<int> &arr, std::chrono::microseconds duration){
     cout<<"After Sorting : ";
