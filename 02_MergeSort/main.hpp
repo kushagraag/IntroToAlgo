@@ -9,8 +9,8 @@ void getElements(vector<int> &a);
 void mergesort(vector<int> &a, vector<int> &b, int l, int r);
 void merge(vector<int> &a, vector<int> &b, int l, int m, int r);
 
-void print(vector<int> &a){
-    for(int i : a){
+void print(vector<int> &b){
+    for(int i : b){
         cout<<i<<" ";
     }
 }
@@ -51,9 +51,9 @@ void merge(vector<int> &a, vector<int> &b, int l, int m, int r){
     for(int j= 0; j< n2; j++)
         R.push_back(a[m+1+j]);
 
-    b.clear();
+    // b.clear();
 
-    int i=0, j=0, k=l;
+    int i=0, j=0;
 
     while(i < n1 && j < n2){
         if(L[i] <= R[j]){
@@ -64,21 +64,18 @@ void merge(vector<int> &a, vector<int> &b, int l, int m, int r){
             b.push_back(R[j]);
             j++;
         }
-        k++;
     }
 
     while(i<n1){
         b.push_back(L[i]);
         i++;
-        k++;
     }
     while(j<n2){
         b.push_back(L[j]);
         j++;
-        k++;
     }
-    for(int i: b){
-        cout<<i<<" ";
-    }
+    // for(int i: b){
+    //     cout<<i<<" ";
+    // }
     cout<<"\n";
 }
